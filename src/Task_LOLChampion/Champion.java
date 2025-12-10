@@ -7,14 +7,35 @@ public abstract class Champion {
     private int defenseDamage;
     private int HP;
     private int MP;
+    private int ex;
+    private int maxEx;
 
-    public Champion(String name,int level,int attackDamage,int defenseDamage,int HP,int MP) {
+    public Champion(String name,int level,int attackDamage,int defenseDamage,int HP,int MP,int maxEx) {
         this.name = name;
         this.levle = level;
         this.attackDamage=attackDamage;
         this.defenseDamage = defenseDamage;
         this.HP = HP;
         this.MP = MP;
+        this.maxEx = maxEx;
+    }
+    public int getlevel() {
+        return levle;
+    }
+    public void setlevel(int level) {
+        this.levle += level;
+    }
+    public int getmaxEx(){
+        return maxEx;
+    }
+    public void setmaxEx(int maxEx) {
+        this.maxEx = maxEx;
+    }
+    public int getEx(){
+        return ex;
+    }
+    public void setEx(int ex){
+        this.ex = ex;
     }
     public String getName() {
         return name;
@@ -36,6 +57,9 @@ public abstract class Champion {
     }
     public int getattackDamage() {
         return this.attackDamage;
+    }
+    public void setattackDamage(int attackDamage){
+        this.attackDamage += attackDamage;
     }
     public void attackTo(Champion target){
         this.HP-=target.getattackDamage();
