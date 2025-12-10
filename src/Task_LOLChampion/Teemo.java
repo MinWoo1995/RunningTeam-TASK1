@@ -1,8 +1,8 @@
 package Task_LOLChampion;
 
-public class Ash extends Champion {
-    public Ash(String name){
-        super(name,1,100,50,600,500);
+public class Teemo extends Champion{
+    public Teemo(String name) {
+        super(name,2,30,10,800,400);
     }
     @Override
     public void useQ(Champion target) {
@@ -29,7 +29,7 @@ public class Ash extends Champion {
         System.out.println(target.getName()+"가"+getName()+"에게 공격 당하였습니다. 현재"+target.getName()+"의 체력은"+target.getHP()+"입니다.");
         //출력문을 데미지 계산 위에 위치시켜서 감소된 HP 확인이 안되었다.[문제]
         int mp = getMP();
-        mp -= 50;
+        mp -= 60;
         setMP(mp);
         System.out.println(getName()+"의 남은 마력 : "+getMP());
     }
@@ -41,9 +41,8 @@ public class Ash extends Champion {
         System.out.println(target.getName()+"가"+getName()+"에게 공격 당하였습니다. 현재"+target.getName()+"의 체력은"+target.getHP()+"입니다.");
         //출력문을 데미지 계산 위에 위치시켜서 감소된 HP 확인이 안되었다.[문제]
         int mp = getMP();
-        mp -= 20;
+        mp -= 80;
         setMP(mp);
         System.out.println(getName()+"의 남은 마력 : "+getMP());
     }
-
 }
