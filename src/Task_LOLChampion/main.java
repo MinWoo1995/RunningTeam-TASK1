@@ -21,6 +21,11 @@ public class main {
         Lux lux1 = new Lux("Lux1");
         Teemo teemo1 = new Teemo("Teemo1");
 
+        //가렌에게 “레벨업(levelUp)” 메서드를 만들어 체력·공격력 증가하게 해보기
+        garen1.levelUp(200);
+        garen1.useR(ash1);
+
+
 
 
 
