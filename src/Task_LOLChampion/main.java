@@ -35,6 +35,8 @@ public class main {
         garen2.defenseDamageUp();
         garen2.dash();
 
+        //“치명타 확률” 같은 고유 패시브를 메서드로 추가해보기
+        garen1.useE(ash1);
 
 
 

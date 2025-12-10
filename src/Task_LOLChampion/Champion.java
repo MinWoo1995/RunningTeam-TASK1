@@ -12,10 +12,13 @@ public abstract class Champion {
     private int ex;
     private int maxEx;
     Random rand = new Random();
-    int mindamage=100;
-    int maxmindamage=300;
-    int range = maxmindamage - mindamage+1;
-    int randomDamage = rand.nextInt(range)+mindamage;
+    private int mindamage=100;
+    private int maxmindamage=300;
+    private int randomDamage;
+    private int range = maxmindamage - mindamage+1;
+
+    final double CRITICAL_CHANCE = 0.5;//50% 확률
+    Random random = new Random();
 
     public Champion(String name,int level,int attackDamage,int defenseDamage,int HP,int MP,int maxEx) {
         this.name = name;
@@ -25,6 +28,13 @@ public abstract class Champion {
         this.HP = HP;
         this.MP = MP;
         this.maxEx = maxEx;
+    }
+    public int criticalDamage(){
+        double probabilityCheck = random.nextDouble();
+        if (probabilityCheck < CRITICAL_CHANCE) {
+            randomDamage = rand.nextInt(range)+mindamage;
+        }
+        return this.randomDamage;
     }
     public int getlevel() {
         return levle;
